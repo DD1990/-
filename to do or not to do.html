@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(){
+	document.getElementById("crop").setAttribute("disabled", true)
+	var random = Math.ceil(Math.random()*10)
+	if(random>5.05){
+	  //占比=10%
+		document.getElementById("a").style.color="red";
+		alert("do event one");
+	}else if(random>0.1 && random <=5.05){
+	  //占比=15%
+		document.getElementById("b").style.color="red";
+		alert("do event two");
+	}else{
+		document.getElementById("c").style.color="red";
+		alert("not do");
+	}
+}
+</script>
+</head>
+
+<body>
+<P>Lazy hesitation（notice：Can only be used once）</P>
+<P>Probability as follows：</P>
+<ul>
+<li id="a">do event one  - 49.5% </li>
+<li id="b">do event two  - 49.5% </li>
+<li id="c">not  to  do   - 1% </li>
+</ul>
+<button id="crop" onclick="myFunction()">Make decisions for me</button>
+</body>
+</html>
